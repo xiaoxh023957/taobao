@@ -1,0 +1,116 @@
+/*-----------Reset----------*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dd,
+ul,
+ol,
+form,
+input,
+button,
+textarea,
+th,
+td,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+  vertical-align: top;
+}
+
+a:hover {
+  color: #f40;
+}
+
+img {
+  border: none;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+body {
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+  background-color: #f4f4f4;
+}
+/* end reset */
+/*-----------public sytle-----------------*/
+
+.wrap {
+  width: 1190px;
+  margin: 0 auto;
+ 
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.c2 {
+  color: #f22e00;
+}
+.c4 {
+  color: #ff4400;
+}
+.c5 {
+  color: #ff5000;
+}
+.c9 {
+  color: #9c9c9c;
+}
+.cc{color: #ccc}
+
+.bg {
+  background-image: -webkit-linear-gradient(left, #ff9000 0, #ff5000 100%);
+  background-image: -o-linear-gradient(left, #ff9000 0, #ff5000 100%);
+  background-image: linear-gradient(to right, #ff9000 0, #ff5000 100%);
+}
+.bf{ background: #fff;}
+.weight {
+  font-weight: bold;
+}
+

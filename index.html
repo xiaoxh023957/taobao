@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>淘宝网 - 淘！我喜欢</title>
+        <link rel="icon" href="images/title-p.ico" />
+        <link rel="stylesheet" href="css/index.css" />
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/index.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- 通过三个月从零开始的学习，这是我做的第一个相对来说比较完整的一个作品，综合运用到了我目前所掌握的大部分知识，页面布局部分采用了传统法布局方式和grid布局 ，利用calc（）计算宽度，CSS新增选择器，伪类实现hover效果，CSS代码共用，结构模块化等等，js部分采用的是jq实现交互，HTML新增属性及事件，利用数组方法map遍历data中数组实现内容的添加，大幅度减少了for循环的使用，利用函数传参进行相近功能的实现等等 -->
+        <!-- 头部 -->
+        <header id="header">
+            <!-- 头部信息 -->
+            <div id="head-info" class="wrap clearfix">
+                <ul class="fl">
+                    <li class="head-region">
+                        <span>中国大陆</span>
+                        <span class="iconfont c9 fr">&#xe606;</span>
+                        <div class="region-layer listyle onOff">
+                            <ul>
+                                <li><a href=""> 全球</a></li>
+                                <li><a href=""> 中国大陆</a></li>
+                                <li><a href=""> 香港</a></li>
+                                <li><a href=""> 台湾</a></li>
+                                <li><a href=""> 澳门</a></li>
+                                <li><a href=""> 韩国</a></li>
+                                <li><a href=""> 马来西亚</a></li>
+                                <li><a href=""> 澳大利亚</a></li>
+                                <li><a href=""> 新加坡</a></li>
+                                <li><a href=""> 新西兰</a></li>
+                                <li><a href=""> 加拿大</a></li>
+                                <li><a href=""> 美国</a></li>
+                                <li><a href=""> 日本</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="c2">亲,请登录</a>
+                        <a href="#">免费注册</a>
+                    </li>
+                    <li>
+                        <a href="#">手机逛淘宝</a>
+                    </li>
+                </ul>
+
+                <ul class="fr">
+                    <li class="head-mytb">
+                        <a href="#">我的淘宝</a>
+                        <span class="iconfont c9">&#xe606;</span>
+
+                        <div class="mytb-layer listyle onOff">
+                            <a href="#">已买到的宝贝</a>
+                            <a href="#">我的足迹</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="iconfont c4">&#xe508;</i>
+                        <a href="#">购物车<em class="c2 weight">0</em></a>
+                        <span class="iconfont c9">&#xe606;</span>
+                    </li>
+                    <li class="head-favorites">
+
+                        <a href="#"><i class="iconfont c9 star">&#xe502;</i>收藏夹</a>
+                        <span class="iconfont c9">&#xe606;</span>
+                        <div class="favorites-layer listyle onOff">
+                            <a href="#">收藏的宝贝</a>
+                            <a href="#">收藏的店铺</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">商品分类</a>
+                    </li>
+                    <li class="c9">|</li>
+                    <li class="head-seller">
+                        <a href="#">千牛卖家中心</a>
+                        <span class="iconfont c9">&#xe606;</span>
+                        <div class="seller-layer listyle onOff">
+                            <a href="#">免费开店</a>
+                            <a href="#">已卖出的宝贝</a>
+                            <a href="#">出售中的宝贝</a>
+                            <a href="#">卖家服务市场</a>
+                            <a href="#">卖家培训中心</a>
+                            <a href="#">体验中心</a>
+                            <a href="#">问商友</a>
+                        </div>
+                    </li>
+                    <li class="head-service">
+                        <a href="#">联系客服</a>
+                        <span class="iconfont c9">&#xe606;</span>
+                        <div class="service-layer listyle onOff">
+                            <a href="#">消费者客服</a>
+                            <a href="#">卖家客服</a>
+                        </div>
+                    </li>
+                    <li class="head-menu">
+                        <span class="iconfont c4 weight">&#xe6ae;</span>
+                        <a href="#">网站导航</a>
+                        <span class="iconfont c9">&#xe606;</span>
+                        <div class="menu-w  clearfix onOff">
+                            <div class="menu-theme">
+                                <h4>主题市场</h4>
+                                <ul>
+                                    <li><a href="#">女装<i class="hot"></i></a></li>
+                                    <li><a href="#">男装</a></li>
+                                    <li><a href="#">内衣</a></li>
+                                    <li><a href="#">鞋靴</a></li>
+                                    <li><a href="#">箱包</a></li>
+                                    <li><a href="#">婴童</a></li>
+                                    <li><a href="#">家电<i class="new"></i></a></li>
+                                    <li><a href="#">数码</a></li>
+                                    <li><a href="#">手机</a></li>
+                                    <li><a href="#">美妆</a></li>
+                                    <li><a href="#">珠宝</a></li>
+                                    <li><a href="#">眼镜</a></li>
+                                    <li><a href="#">手表</a></li>
+                                    <li><a href="#">运动</a></li>
+                                    <li><a href="#">户外</a></li>
+                                    <li><a href="#">乐器</a></li>
+                                    <li><a href="#">游戏</a></li>
+                                    <li><a href="#">动漫</a></li>
+                                    <li><a href="#">影视</a></li>
+                                    <li><a href="#">美食</a></li>
+                                    <li><a href="#">鲜花</a></li>
+                                    <li><a href="#">宠物</a></li>
+                                    <li><a href="#">农资</a></li>
+                                    <li><a href="#">房产</a></li>
+                                    <li><a href="#">装修</a></li>
+                                    <li><a href="#">建材</a></li>
+                                    <li><a href="#">家居<i class="hot"></i></a></li>
+                                    <li><a href="#">百货</a></li>
+                                    <li><a href="#">汽车</a></li>
+                                    <li><a href="#">二手车</a></li>
+                                    <li><a href="#">办公</a></li>
+                                    <li><a href="#">定制</a></li>
+                                    <li><a href="#">教育</a></li>
+                                    <li><a href="#">卡券</a></li>
+                                    <li><a href="#">本地</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-features">
+                                <h4>特色市场</h4>
+                                <ul>
+                                    <li><a href="#">爱逛街</a></li>
+                                    <li><a href="#">美妆秀</a></li>
+                                    <li><a href="#">全球购<i class="hot"></i></a></li>
+                                    <li><a href="#">腔调</a></li>
+                                    <li><a href="#">淘女郎</a></li>
+                                    <li><a href="#">星店</a></li>
+                                    <li><a href="#">极有家<i class="hot"></i></a></li>
+                                    <li><a href="#">阿里拍卖</a></li>
+                                    <li><a href="#">淘宝众筹</a></li>
+                                    <li><a href="#">飞猪</a></li>
+                                    <li><a href="#">亲宝贝<i class="new"></i></a></li>
+                                    <li><a href="#">闲鱼</a></li>
+                                    <li><a href="#">农资</a></li>
+                                    <li><a href="#">天天特卖<i class="hot"></i></a></li>
+                                    <li><a href="#">Outlets</a></li>
+                                    <li><a href="#">俪人购</a></li>
+                                    <li><a href="#">聚名品</a></li>
+                                    <li><a href="#">淘抢购</a></li>
+                                    <li><a href="#">全球精选</a></li>
+                                    <li><a href="#">非常大牌</a></li>
+                                    <li><a href="#">试用</a></li>
+                                    <li><a href="#">量贩团</a></li>
+                                    <li><a href="#">阿里翻译<i class="new"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-app">
+                                <h4>阿里APP</h4>
+                                <ul>
+                                    <li><a href="#">淘宝<i class="hot"></i></a></li>
+                                    <li><a href="#">天猫</a></li>
+                                    <li><a href="#">支付宝</a></li>
+                                    <li><a href="#">聚划算</a></li>
+                                    <li><a href="#">飞猪</a></li>
+                                    <li><a href="#">蚂蚁聚宝<i class="new"></i></a></li>
+                                    <li><a href="#">旺信</a></li>
+                                    <li><a href="#">闲鱼<i class="hot"></i></a></li>
+                                    <li><a href="#">阿里钱盾</a></li>
+                                    <li><a href="#">钉钉<i class="hot"></i></a></li>
+                                    <li><a href="#">高德地图</a></li>
+                                    <li><a href="#">点点虫</a></li>
+                                    <li><a href="#">虾米音乐</a></li>
+                                    <li><a href="#">淘票票</a></li>
+                                    <li><a href="#">菜鸟裹裹<i class="new"></i></a></li>
+                                    <li><a href="#">爱逛街</a></li>
+                                    <li><a href="#">拍卖会</a></li>
+                                    <li><a href="#">阿里云</a></li>
+                                    <li><a href="#">网商银行</a></li>
+                                    <li><a href="#">阿里邮箱<i class="new"></i></a></li>
+                                    <li><a href="#">阿里众包</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-recom">
+                                <h4>精彩推荐集</h4>
+                                <ul>
+                                    <li><a href="#">余额宝<i class="hot"></i></a></li>
+                                    <li><a href="#">大牌捡宝</a></li>
+                                    <li><a href="#">淘公仔</a></li>
+                                    <li><a href="#">浏览器</a></li>
+                                    <li><a href="#">淘宝香港</a></li>
+                                    <li><a href="#">淘宝台湾</a></li>
+                                    <li><a href="#">淘宝全球</a></li>
+                                    <li><a href="#">淘宝东南亚</a></li>
+                                    <li><a href="#">闺蜜淘货</a></li>
+                                    <li><a href="#">大众评审</a></li>
+                                    <li><a href="#">淘工作<i class="new"></i></a></li>
+                                    <li><a href="#">阿里巴巴认证<i class="new"></i></a></li>
+                                </ul>
+                        
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 头部搜索区 -->
+            <div id="head-search">
+                <div class="search-w wrap">
+                    <h1><a href="#">淘宝网</a></h1>
+                    <div class="head-code">
+                        <span class="iconfont close">&#xe646;</span>
+                        <p>手机淘宝</p>
+                        <img src="images/head-code.png" />
+                    </div>
+
+                    <div class="search-con">
+                        <ul class="search-tab clearfix">
+                            <li class="active"> 宝贝 </li>
+                            <li>天猫</li>
+                            <li>店铺</li>
+                        </ul>
+                        <div class="search-bar">
+                            <i class="iconfont glass c9">&#xe65c;</i>
+                            <strong>连衣裙 小个子</strong>
+                            <input type="text" autofocus="autofocus" />
+                            <span class="iconfont camera c9">&#xe665;</span>
+                            <button class="bg">搜索</button>
+                        </div>
+
+                        <ul class="recommended">
+                            <li><a href="#" class="c4">杨梅</a></li>
+                            <li><a href="#">樱桃</a></li>
+                            <li><a href="#" class="c4">芒果</a></li>
+                            <li><a href="#">百香果</a></li>
+                            <li><a href="#">时尚连衣裙</a></li>
+                            <li><a href="#" class="c4">男士T恤</a></li>
+                            <li><a href="#">沙发</a></li>
+                            <li><a href="#">时尚休闲裤</a></li>
+                            <li><a href="#">男短裤</a></li>
+                            <li><a href="#">风扇</a></li>
+                            <li><a href="#">男士内裤</a></li>
+                            <li><a href="#">定制窗帘</a></li>
+                            <li><a href="#">吊灯</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 导航栏 -->
+            <nav id="nav-bar" class="bg">
+                <div class="wrap">
+                    <h2 class="c5">主题市场</h2>
+                    <ul class="nav ">
+                        <li><a href="#">天猫</a></li>
+                        <li><a href="#">聚划算</a></li>
+                        <li><a href="#">天猫超市</a></li>
+                        <li class="line">|</li>
+                        <li><a href="#">淘抢购</a></li>
+                        <li><a href="#">电器城</a></li>
+                        <li><a href="#">司法拍卖</a></li>
+                        <li><a href="#"> 淘宝心选</a></li>
+                        <li><a href="#">兴农扶贫</a></li>
+                        <li class="line">|</li>
+                        <li><a href="#">飞猪旅行</a></li>
+                        <li><a href="#">智能生活</a></li>
+                        <li><a href="#">苏宁易购</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="fixed-hd bf">
+            
+            <div class="wrap">
+                <h2 class="fl">
+                    <a href="#"></a>
+                </h2>
+                <div class="search-bar">
+                    <em class="iconfont fl">宝贝 &#xe606;</em>
+                    <i class="iconfont glass c9">&#xe65c;</i>
+                    <strong>连衣裙 小个子</strong>
+                    <input type="text" autofocus="autofocus" />
+                    <span class="iconfont camera c9">&#xe665;</span>
+                    <button class="bg">搜索</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- 主体部分 -->
+        <section id="section" class="wrap clearfix">
+
+            <!-- ----首部分内容开始----- -->
+            <!-- 左侧菜单和轮播区 -->
+            <div class="frist-part fl">
+                <!-- 左侧菜单栏 -->
+                <ul class="side-menu fl">
+                    <li>
+                        <a href="#">女装</a>/
+                        <a href="#">男装</a>/
+                        <a href="#">内衣</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">鞋靴</a>/
+                        <a href="#">箱包</a>/
+                        <a href="#">配件</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">童装玩具</a>/
+                        <a href="#">孕产</a>/
+                        <a href="#">用品</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">家电</a>/
+                        <a href="#">数码</a>/
+                        <a href="#">手机</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">美妆</a>/
+                        <a href="#">洗护</a>/
+                        <a href="#">保健品</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">珠宝</a>/
+                        <a href="#">眼镜</a>/
+                        <a href="#">手表</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">运动</a>/
+                        <a href="#">户外</a>/
+                        <a href="#">乐器</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">游戏</a>/
+                        <a href="#">动漫</a>/
+                        <a href="#">影视</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">美食</a>/
+                        <a href="#">生鲜</a>/
+                        <a href="#">零食</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">鲜花</a>/
+                        <a href="#">宠物</a>/
+                        <a href="#">农资</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">工具</a>/
+                        <a href="#">装修</a>/
+                        <a href="#">建材</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">家具</a>/
+                        <a href="#">家饰</a>/
+                        <a href="#">家纺</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">汽车</a>/
+                        <a href="#">二手车</a>/
+                        <a href="#">用品</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">办公</a>/
+                        <a href="#">DIY</a>/
+                        <a href="#">五金电子</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">百货</a>/
+                        <a href="#">餐厨</a>/
+                        <a href="#">家庭保健</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+                    <li>
+                        <a href="#">学习</a>/
+                        <a href="#">卡券</a>/
+                        <a href="#">本地服务</a>
+                        <span class="iconfont c9">&#xe6a3;</span>
+                    </li>
+
+                </ul>
+                <!-- 左菜单栏弹层 -->
+                <div class="side-menu-layer clearfix">
+                    <div class="service-links fl">
+                        <div class="service-links-con">
+                            <h5>
+                                <a href="#">女装</a>
+                                <a class="iconfont more" href="#">更多&#xe6a3;</a>
+                            </h5>
+                            <p>
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=沙发" class="h">沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=床" class="h">床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=高低床" class="h">高低床</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=餐桌" class="h">餐桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=床垫">床垫</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=茶几">茶几</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电视柜">电视柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=衣柜">衣柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=鞋柜">鞋柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=椅凳">椅凳</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书桌">书桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电脑桌">电脑桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=坐具">坐具</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=现代简约">现代简约</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=美式家具">美式家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=北欧家具">北欧家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=中式家具">中式家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童家具">儿童家具</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=真皮沙发">真皮沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=布艺沙发">布艺沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=皮床">皮床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=实木床">实木床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童床">儿童床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=乳胶床垫">乳胶床垫</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童学习桌">儿童学习桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书架">书架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=花架">花架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=椅子">椅子</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电脑椅">电脑椅</a>
+
+
+                                <a href="//www.taobao.com/market/youjia/foshanjiaju.php">佛山家具</a>
+
+                            </p>
+                        </div>
+                        <div class="service-links-con">
+                            <h5>
+                                <a href="#">女装</a>
+                                <a class="iconfont more" href="#">更多&#xe6a3;</a>
+                            </h5>
+                            <p>
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=沙发" class="h">沙发</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=床" class="h">床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=高低床" class="h">高低床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=餐桌" class="h">餐桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=床垫">床垫</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=茶几">茶几</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电视柜">电视柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=衣柜">衣柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=鞋柜">鞋柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=椅凳">椅凳</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书桌">书桌</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=电脑桌">电脑桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=坐具">坐具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=现代简约">现代简约</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=美式家具">美式家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=北欧家具">北欧家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=中式家具">中式家具</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=儿童家具">儿童家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=真皮沙发">真皮沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=布艺沙发">布艺沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=皮床">皮床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=实木床">实木床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童床">儿童床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=乳胶床垫">乳胶床垫</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童学习桌">儿童学习桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书架">书架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=花架">花架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=椅子">椅子</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电脑椅">电脑椅</a>
+
+
+                                <a class="c4" href="//www.taobao.com/market/youjia/foshanjiaju.php">佛山家具</a>
+
+                            </p>
+                        </div>
+                        <div class="service-links-con">
+                            <h5>
+                                <a href="#">女装</a>
+                                <a class="iconfont more" href="#">更多&#xe6a3;</a>
+                            </h5>
+                            <p>
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=沙发" class="h">沙发</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=床" class="h">床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=高低床" class="h">高低床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=餐桌" class="h">餐桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=床垫">床垫</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=茶几">茶几</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电视柜">电视柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=衣柜">衣柜</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=鞋柜">鞋柜</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=椅凳">椅凳</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书桌">书桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电脑桌">电脑桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=坐具">坐具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=现代简约">现代简约</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=美式家具">美式家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=北欧家具">北欧家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=中式家具">中式家具</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童家具">儿童家具</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=真皮沙发">真皮沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=布艺沙发">布艺沙发</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=皮床">皮床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=实木床">实木床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=儿童床">儿童床</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=乳胶床垫">乳胶床垫</a>
+
+
+                                <a class="c4" href="//s.taobao.com/list?source=youjia&amp;q=儿童学习桌">儿童学习桌</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=书架">书架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=花架">花架</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=椅子">椅子</a>
+
+
+                                <a href="//s.taobao.com/list?source=youjia&amp;q=电脑椅">电脑椅</a>
+
+
+                                <a href="//www.taobao.com/market/youjia/foshanjiaju.php">佛山家具</a>
+
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="service-rmd fr">
+                        <h3>猜你喜欢</h3>
+                        <div class="service-rmd-con">
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                            <a href="#"><img src="images/layer-cnxh.jpg" alt=""><span>猜你喜欢猜你喜欢</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 轮播区 -->
+                <div class="frist-part-con fl">
+                    <div class="imgbox-top">
+                        <button class="top-prev iconfont">&#xe679;</button>
+                        <button class="top-next iconfont">&#xe6a3;</button>
+                        <ul class="imgsLi1 clearfix">
+                            <!-- <li>
+                                <a href="#"><img src="images/imgbx-t1.jpg"></a>
+                            </li> -->
+                        </ul>
+                        <ul class="imgbox-top-circular"></ul>
+                    </div>
+
+
+                    <div class="imgbox-btm-hd">
+                        <span></span>
+                        <em>理想生活上天猫</em>
+                        <i><strong>1</strong>/6</i>
+                    </div>
+
+
+                    <div class="imgbox-btm">
+                        <button class="btm-prev iconfont">&#xe679;</button>
+                        <button class="btm-next iconfont">&#xe6a3;</button>
+                        <ul class="imgbox-btm-line clearfix">
+                            <!-- <li class="btmactive"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li> -->
+                        </ul>
+                        <ul class="imgsLi2 clearfix">
+                            <!-- <li class="fristLi">
+                                <img src="images/imgbox/imgbox-b1.gif">
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 轮播区热卖广告 -->
+                <div class="frist-part-ad fr">
+                    <img class="imgbox-top-r" src="images/imgbox-t-r.jpg" alt="">
+                    <h5>今日热卖</h5>
+                    <img class="imgbox-btm-r" src="images/imgbox-b-r.jpg" alt="">
+                </div>
+
+                <!-- 淘宝头条 -->
+                <div class="tb-news fl">
+                    <h3 class="fl">
+                        <em>淘宝头条</em>
+                        <p>让你的生活更有趣</p>
+                    </h3>
+                    <a class="more iconfont c9" href="#">更多&#xe6a3;</a>
+                    <div class="tb-news-con fr">
+                        <ul>
+                            <!-- <li>
+                                <a href="#">
+                                    <img class="fl" src="images/tb-news-img1.jpg" alt="">
+                                    <h4>扦插花卉不生根？教你3分钟学“高压”</h4>
+                                </a>
+                                <p>喜欢养花的人越来越多，想必很多花友经常会去花店或者花卉市场买一些绿植盆栽养在家里，当然随着养花的经验越来越足。</p>
+                            </li> -->
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 功能区 -->
+            <aside id="fn-areas" class="fr">
+
+                <div class="member">
+                    <div class="member-hd">
+                        <div class="hd-pic">
+                            <img src="images/member-hd.jpg" alt="">
+                        </div>
+
+                        <span>Hi！你好</span>
+                        <p>
+                            <a href="#"><i class="hd-tjb"></i> 领淘金币抵钱</a>
+                            <a href="#"><i class="hd-jlb"></i> 会员俱乐部</a>
+                        </p>
+                    </div>
+                    <div class="member-ft">
+                        <button class="login-btn bg">登录</button>
+                        <button class="registered-btn bg">注册</button>
+                        <button class="shop-btn bg">开店</button>
+                    </div>
+                </div>
+
+                <a href="#" class="user-report">网上有害信息举报专区<span class="triangle"></span></a>
+                <!-- 关注 -->
+                <div class="notice">
+                    <ul class="notice-hd">
+                        <li class="notiactive"><a href="#">公告</a></li>
+                        <li><a href="#">规则</a></li>
+                        <li><a href="#">论坛</a></li>
+                        <li><a href="#">安全</a></li>
+                        <li><a href="#">公益</a></li>
+                </div>
+
+                <div class="notice-ft">
+                    <ul>
+                        <li><a class="c5" href="#">海淘青年都在淘宝买啥？</a></li>
+                        <li><a href="#">聚划算再狂补消费电子</a></li>
+                        <li><a href="#">直播吃百香果月入七万</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">新增《淘宝网汽配行业管理规范》公示通知</a></li>
+                        <li><a href="#">《淘宝网区域零售服务说明》变更公示通知</a></li>
+                        <li><a href="#">《淘宝网票务行业管理规范》变更公示通知</a></li>
+                        <li><a href="#">《淘宝网数字娱乐市场须提供官方授权的商品目录》变更公示通知</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="c5" href="#">淘宝1212活动招商</a></li>
+                        <li><a href="#">中差评功能升级</a></li>
+                        <li><a href="#">陌生人拼团上线</a></li>
+                        <li><a href="#">运营神器年中大促</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="c5" href="#">魔豆妈妈公益项目</a></li>
+                        <li><a class="c5" href="#">让母爱永不打烊！</a></li>
+                        <li><a href="#">卖家注意：风险通报！</a></li>
+                        <li><a href="#">售假获刑又起诉！</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">淘宝公益平台正式更名</a></li>
+                        <li><a href="#">益起来商家招募即将截止</a></li>
+                        <li><a href="#">卖家如何设置公益宝贝</a></li>
+                        <li><a href="#">公益机构开店全攻略</a></li>
+                    </ul>
+                </div>
+                <!-- 快捷功能 -->
+                <div class="shortcut clearfix">
+
+                    <div class="shortcut-hd fl">
+                        <div class="shortcut-hd-box pay">
+                            <a href="#">
+                                <span></span>
+                                <p>充话费</p>
+                            </a>
+                            <div class="shortcut-layer">
+                                <div class="layer-tab">
+                                    <a class="choose" href="#">充话费</a>
+                                    <a href="#">充流量</a>
+                                    <a href="#">充固话</a>
+                                    <a href="#">充宽带</a>
+                                </div>
+                                <i class="iconfont choose-close ">&#xe646;</i>
+                                <div class="container clearfix">
+                                    <!-- 话费充值 -->
+                                    <div class="container-w fl">
+                                        <div class="container-phone  container-input ">
+                                            <div class="select-contacts">
+                                                <input type="" placeholder="请输入电话号码">
+                                                <i class="contacts iconfont cc">&#xe60f;
+                                                </i>
+                                            </div>
+
+                                            <div class="select-money ">
+                                                <input type="text" value="50元" disabled>
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+                                        <p>售价<em class="cc">￥</em><strong class="c4">49-49.8</strong></p>
+                                        <button>立即充值</button>
+                                    </div>
+
+                                    <!-- 流量充值-->
+                                    <div class="container-w fl">
+                                        <div class="container-traffic  container-input ">
+                                            <div class="select-contacts">
+                                                <input type="" placeholder="请输入电话号码">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class="select-type ">
+                                                <input type="text" value="全国流量" disabled>
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <a class="details" href="#">详情</a>
+                                        </div>
+                                        <p>售价<em class="cc">￥</em><strong class="c4">49-49.8</strong></p>
+                                        <button>立即充值</button>
+                                    </div>
+
+                                    <!-- 固话充值 -->
+                                    <div class="container-w fl">
+                                        <input type="radio" name="cop" id="dx" checked><label for="dx">电信</label>
+                                        <input type="radio" name="cop" id="lt"><label for="lt">联通</label>
+                                        <div class="container-fixed-line container-input ">
+                                            <div class="select-contacts">
+                                                <input type="text" placeholder="区号 - 号码（不支持小灵通）">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class="select-type ">
+                                                <input type="text" value="50元" disabled>
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+                                        </div>
+                                        <button class="fl">立即充值</button>
+                                        <p class=" price-p">售价<em class="cc">￥</em><strong class="c4">49-49.8</strong>
+                                        </p>
+
+
+                                    </div>
+
+                                    <!-- 宽带充值-->
+
+                                    <div class="container-w fl">
+                                        <div class="container-broadband  container-input ">
+                                            <div class="select-contacts ">
+                                                <input type="text" placeholder="电信/城市">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+                                            <div class="select-contacts">
+                                                <input type="" placeholder="请输入宽带账号">
+                                                <i class="contacts iconfont cc">&#xe60f;</i>
+                                            </div>
+
+                                            <div class="select-money ">
+                                                <input type="text" value="50元" disabled>
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <em class="question-icon bg">?</em>
+                                        </div>
+                                        <button class="btm-btn fl">立即充值</button>
+                                        <p class="price-p">售价<em class="cc">￥</em><strong class="c4">49-49.8</strong>
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shortcut-hd-box tourism">
+                            <a href="#">
+                                <span></span>
+                                <p>旅行</p>
+                            </a>
+                            <div class="shortcut-layer">
+                                <div class="layer-tab">
+                                    <a class="choose" href="#">国内机票</a>
+                                    <a href="#">国际机票</a>
+                                    <a href="#">酒店客栈</a>
+                                    <a href="#">度假门票</a>
+                                    <a href="#">火车票</a>
+                                </div>
+                                <i class="iconfont choose-close ">&#xe646;</i>
+                                <div class="container clearfix">
+                                    <!-- 国内机票 -->
+                                    <div class="container-w fl">
+                                        <input type="radio" name="gnjp" id="dc" checked><label for="dx">单程</label>
+                                        <input type="radio" name="gnjp" id="wf"><label for="lt">往返</label>
+                                        <em class="cc "> 港澳台请选择国际机票</em>
+                                        <div class="  container-input fl">
+                                            <div class="start-city">
+                                                <label for="start">出发</label>
+                                                <input id="start" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                            <em class="iconfont cc arrow">&#xe63f;</em>
+                                            <div class="start-day ">
+                                                <label for=" date">出发</label>
+                                                <input id=' date' type="text" value="日期">
+                                                <i class="sel-btn iconfont cc">&#xe65f;</i>
+                                            </div>
+                                        </div>
+                                        <div class="end  container-input fl">
+                                            <div class="end-city">
+                                                <label for="end">到达</label>
+                                                <input id="end" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                        </div>
+                                        <button class="btm-btn fl">查找</button>
+                                    </div>
+
+                                    <!-- 国际机票 -->
+                                    <div class="container-w fl intn-ticket">
+                                        <div class="la-box">
+                                            <input type="radio" name="gjjp" id="dc" checked><label for="dx">单程</label>
+                                            <input type="radio" name="gjjp" id="wf"><label for="lt">往返</label>
+                                        </div>
+                                        <div class="  container-input fl">
+                                            <div class="start-city">
+                                                <label for="start">出发</label>
+                                                <input id="start" type="text" placeholder="北京">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                            <em class="iconfont cc arrow">&#xe63f;</em>
+                                            <div class="start-day ">
+                                                <label for=" date">出发</label>
+                                                <input id=' date' type="text" value="日期">
+                                                <i class="sel-btn iconfont cc">&#xe65f;</i>
+                                            </div>
+                                        </div>
+                                        <div class="end  container-input fl">
+                                            <div class="end-city">
+                                                <label for="end">到达</label>
+                                                <input id="end" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                        </div>
+                                        <button class="btm-btn fl">查找</button>
+                                    </div>
+
+                                    <!-- 酒店客栈 -->
+                                    <div class="container-w fl">
+                                        <input type="radio" name="dq" id="gn" checked><label for="gn">国内/港澳台</label>
+                                        <input type="radio" name="dq" id="hw"><label for="hw">海外</label>
+
+                                        <div class="  container-input fl">
+
+                                            <div class="stay-place">
+                                                <label for="where">入住</label>
+                                                <input id="where" type="text" placeholder="北京">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+
+                                            <div class=" stay-date">
+                                                <label for=" when">入住</label>
+                                                <input id=' when ' type="text" value="2019-7-7">
+                                                <i class="sel-btn iconfont cc">&#xe65f;</i>
+                                            </div>
+                                        </div>
+                                        <div class="  container-input fl">
+
+                                            <div class="place">
+
+                                                <input id="where" type="text" placeholder="酒店/地标">
+
+                                            </div>
+
+                                            <div class=" leave-date">
+                                                <label for=" when">离店</label>
+                                                <input id=' when ' type="text" value="2019-7-7">
+                                                <i class="sel-btn iconfont cc">&#xe65f;</i>
+                                            </div>
+                                        </div>
+
+                                        <button class="btm-btn fl">查找</button>
+                                    </div>
+
+                                    <!-- 度假门票 -->
+                                    <div class=" holiday container-w fl">
+                                        <div class="la-box">
+                                            <input type="radio" name="xz" id="dj" checked><label for="dx">度假</label>
+                                            <input type="radio" name="xz" id="mp"><label for="lt">门票</label>
+                                        </div>
+
+                                        <div class="end  container-input fl">
+                                            <div class="end-city">
+                                                <label for="end">到达</label>
+                                                <input id="end" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                        </div>
+                                        <div class="end  container-input fl">
+                                            <div class="end-city">
+                                                <label for="end">到达</label>
+                                                <input id="end" type="text" placeholder="城市/景点">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+                                        </div>
+                                        <button class="btm-btn fl">查找</button>
+                                        <a class="group-buy" href="#">看这里，机票团购价，旅行更划算</a>
+                                    </div>
+
+                                    <!-- 火车票 -->
+                                    <div class="container-w fl">
+
+                                        <div class="  container-input fl">
+
+                                            <div class="start-city">
+                                                <label for="start">出发</label>
+                                                <input id="start" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+
+                                            <div class="start-day ">
+                                                <label for=" date">出发</label>
+                                                <input id=' date' type="text" value="日期">
+                                                <i class="sel-btn iconfont cc">&#xe65f;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="end  container-input fl">
+
+                                            <div class="end-city">
+                                                <label for="end">到达</label>
+                                                <input id="end" type="text" placeholder="城市">
+                                                <i class=" iconfont cc">&#xe615;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn fl">查找</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shortcut-hd-box insurance">
+                            <a href="#">
+                                <span></span>
+                                <p>车险</p>
+                            </a>
+                            <div class="shortcut-layer">
+                                <div class="layer-tab">
+                                    <a class="choose" href="#">车险</a>
+                                    <a href="#">意外险</a>
+                                    <a href="#">健康险</a>
+                                    <a href="#">旅行险</a>
+                                    <a href="#">财产险</a>
+                                </div>
+                                <i class="iconfont choose-close ">&#xe646;</i>
+
+                                <div class="container clearfix">
+                                    <!-- 车险 -->
+                                    <div class="container-w fl">
+                                        <div class="container-phone  container-input ">
+                                            <div class="select-city">
+                                                <label for=" cs">热门城市</label>
+                                                <input id="cs" type="" placeholder="请选择城市">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class="select-cop ">
+                                                <label for=" bxgs">保险公司</label>
+                                                <input id="bxgs" type="text" value="人保车险">
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn">立刻报价</button>
+                                        <button class="re-btn ">快速续保</button>
+                                        <a href="#">车险活动</a>
+                                    </div>
+                                    <!-- 意外险 -->
+                                    <div class="container-w fl">
+                                        <div class="container-phone  container-input ">
+                                            <div class="select-contacts">
+                                                <label for=" type">保险类型</label>
+                                                <input id="type" type="" placeholder="航空意外">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class="select-money ">
+                                                <label for=" long">保险期间</label>
+                                                <input id="long" type="text" value="1年以内">
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn">查看合适的保险</button>
+                                    </div>
+                                    <!-- 健康险 -->
+                                    <div class="container-w fl">
+                                        <div class="container-phone  container-input ">
+                                            <div class="select-contacts">
+                                                <label for=" bzlx">保障类型</label>
+                                                <input id="bzlx" type="" placeholder="重大疾病">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class="select-money ">
+                                                <label for=" tsbz">特色保障</label>
+                                                <input id="tsbz" type="text" value="可保证续保">
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn">查看合适的保险</button>
+                                        <a href="#">最全人寿险</a>
+                                    </div>
+                                    <!-- 旅行险 -->
+                                    <div class="container-w fl">
+                                        <div class="container-phone  container-input ">
+                                            <div class="">
+                                                <label for=" cxdq">出行地区</label>
+                                                <input id="cxdq" type="" placeholder="境内">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                            <div class=" ">
+                                                <label for=" cxts">出行天数</label>
+                                                <input id="cxts" type="text" value="7天及以下">
+                                                <i class="sel-btn iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn">查看合适的保险</button>
+                                    </div>
+
+                                    <!-- 财产险 -->
+                                    <div class="container-w fl property">
+                                        <div class="end  container-input ">
+                                            <div class="">
+                                                <label for=" ts">特色保障</label>
+                                                <input id="ts" type="" placeholder="水管爆裂">
+                                                <i class="contacts iconfont cc">&#xe60a;</i>
+                                            </div>
+
+                                        </div>
+
+                                        <button class="btm-btn">查看合适的保险</button>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>游戏</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>彩票</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>电影</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>酒店</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>理财</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>找服务</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>演出</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>水电煤</p>
+                            </a>
+                        </div>
+                        <div class="shortcut-hd-box">
+                            <a href="#">
+                                <span></span>
+                                <p>火车票</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="apps fl ">
+                        <h3>阿里APP <a href="#" class="iconfont apps-more">更多&#xe6a3;</a></h3>
+                        <ul class="apps-list">
+                            <li><img src="images/apps-img/apps-tb.gif" alt="淘宝"></li>
+                            <li><img src="images/apps-img/apps-tm.gif" alt="天猫"></li>
+                            <li><img src="images/apps-img/apps-jhs.gif" alt="聚划算"></li>
+                            <li><img src="images/apps-img/apps-zfb.gif" alt="支付宝"></li>
+                            <li><img src="images/apps-img/apps-ww.gif" alt="旺旺"></li>
+                            <li><img src="images/apps-img/apps-xy.gif" alt="咸鱼"></li>
+                            <li><img src="images/apps-img/apps-gd.gif" alt="高德"></li>
+                            <li><img src="images/apps-img/apps-yk.gif" alt="优酷"></li>
+                            <li><img src="images/apps-img/apps-xm.gif" alt="虾米"></li>
+                            <li><img src="images/apps-img/apps-fz.gif" alt="飞猪"></li>
+                        </ul>
+                        <!-- app弹层 -->
+                        <div class="apps-Layer">
+                            <img src="">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- ----首部分内容结束----- -->
+        </section>
+
+        <!-- ----第二部分内容开始----- -->
+        <div id='goods-shopping' class="second-part part-w wrap sect">
+            <div class=" goods h3-w">
+                <h3>
+                    <img src="images/g-prod.png" alt="有好货">
+                    <span class="iconfont cc">&#xe510;</span> <em class="c9">与品质生活不期而遇</em>
+                </h3>
+                <div class="goods-con goods-shop">
+                    <!-- <div>
+                        <img src="images/yhh.jpg" alt="">
+                        <h4>Max破产都要买的口红</h4>
+                        <p class="c9">《破产姐妹》Max最爱</p>
+                        <p class="iconfont p-col">&#xe61b;5958人说好</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="shopping h3-w">
+                <h3>
+                    <img src="images/shopping.png" alt="爱逛街">
+                    <em class="iconfont fr">更多&#xe6a3;</em>
+                    <em class="c9">献给聪明可爱的你</em>
+                </h3>
+                <div class="goods-shop shopping-con">
+                    <!-- <div>
+                        <img src="images/agj.jpg" alt="">
+                        <h4 class=" introduce ">学院风女生一定要穿的鞋子就是它</h4>
+                        <p class="c9 user-intd"> 巧****搭</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- ----第二部分内容结束----- -->
+
+        <!--淘抢购 -->
+        <div class="t-limit h3-w wrap">
+            <h3>
+                <img src="images/tqg.png" alt="淘抢购">
+                <em class="iconfont fr">更多&#xe6a3;</em>
+                <em class="iconfont fr change" href="#">换一换</em>
+                <em class="c9">距结束：<i class="c5 countdown"><span>13</span> : <span>12</span></i></em>
+            </h3>
+            <div class="t-limit-con">
+                <div>
+                    <img class="fl" src="images/imgbox-b2.jpg" alt="">
+                    <h4>第二件0元中粮复合果汁饮料</h4>
+                    <p class="c9">第二件0元</p>
+                    <div class="pric">
+                        <img src="images/jdt.gif">
+                        <p><span class="yuan c5">￥</span><span class="cur c5">79.9</span> <span
+                                class="pri c9">￥90.0</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img class="fl" src="images/imgbox-b2.jpg" alt="">
+                    <h4>第二件0元中粮复合果汁饮料</h4>
+                    <p class="c9">第二件0元</p>
+                    <div class="pric">
+                        <img src="images/jdt.gif">
+                        <p><span class="yuan c5">￥</span><span class="cur c5">79.9</span> <span
+                                class="pri c9">￥90.0</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img class="fl" src="images/imgbox-b2.jpg" alt="">
+                    <h4>第二件0元中粮复合果汁饮料</h4>
+                    <p class="c9">第二件0元</p>
+                    <div class="pric">
+                        <img src="images/jdt.gif">
+                        <p><span class="yuan c5">￥</span><span class="cur c5">79.9</span> <span
+                                class="pri c9">￥90.0</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第一个广告 -->
+        <div class="frist-ad wrap">
+            <a href="#"><img src="images/b-ad.jpg" alt=""></a>
+        </div>
+
+        <!-- 第三部分内容开始 -->
+        <div id='store-live' class="third-part part-w wrap sect">
+            <div class="store h3-w">
+                <h3>
+                    <img src="images/everyday.png" alt="每日好店">
+                    <em class="iconfont c9 fr">更多&#xe6a3;</em>
+                    <em class="c9">发现深藏的好店</em>
+                </h3>
+
+                <div class="store-con ">
+                    <!-- <div>
+                        <h4>今日推荐<em>暂无店铺推荐</em></h4>
+                        <img src="images/tqg-p.gif">
+                    </div> -->
+ 
+                </div>
+            </div>
+
+            <div class="live h3-w">
+                <h3>
+                    <img src="images/live.png" alt="每日好店">
+                    <em class="c9">你的爱豆直播等你哟</em>
+                </h3>
+                <div class="live-con">
+                    <!-- <div>
+                        <h4>玉见奇迹<em>635观看</em></h4>
+                        <img src="images/tbzb.gif">
+                    </div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 第三部分内容结束 -->
+
+        <!-- 第四部分内容开始 -->
+        <div class="fourth-part othersc-w wrap ">
+            <div class="fourth-part-l">
+                <h3 class="fashion-hd">
+                    <span class="iconfont ">&#xe62b;</span>
+                    时尚爆料王
+                </h3>
+                <div class="fashion-con">
+                    <div class="con-item">
+                        <h4>
+                            <a href="#">腔调</a>
+                        </h4>
+                        <p>全球创意设计师平台</p>
+                        <div class="item-img">
+                            <img src="images/ss1.jpg" alt="">
+                            <img src="images/ss2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="con-item">
+                        <h4>
+                            <a href="#">全球购</a>
+                        </h4>
+                        <p>探索全球美好生活</p>
+                        <div class="item-img">
+                            <img src="images/ss3.jpg" alt="">
+                            <img src="images/ss4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="con-item">
+                        <h4>
+                            <a href="#">魅力购</a>
+                        </h4>
+                        <p>奢品好物立即购</p>
+                        <div class="item-img">
+                            <img src="images/ss5.jpg" alt="">
+                            <img src="images/ss6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fourth-part-r con-item">
+                <img src="images/fs-r.jpg">
+            </div>
+        </div>
+        <!-- 第四部分内容结束 -->
+
+        <!-- 第五部分内容开始 -->
+        <div id='quality-special' class="fifth-part othersc-w part-w wrap sect">
+            <div class="fifth-part-l ">
+                <h3 class="quality-hd">
+                    <span class="iconfont ">&#xe62b;</span>
+                    品质生活家
+                </h3>
+
+                <div class="quality-con">
+
+                    <div class="quality-con-l">
+                        <div class="con-item img-ob">
+                            <img src="images/dwp/1.jpg" alt="">
+                        </div>
+
+                        <div class="con-item ">
+                            <img class="fr" src="images/dwp/2.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+
+                        <div class="con-item">
+                            <img class="fr" src="images/dwp/3.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+                        <div class="con-item">
+                            <img class="fr" src="images/dwp/4.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+                    </div>
+
+                    <div class="quality-con-r">
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/5.jpg" alt="">
+
+                        </div>
+
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/6.jpg" alt="">
+
+                        </div>
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/7.jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="fifth-part-r ">
+                <h3 class="c5">
+                    <span class="iconfont ">&#xe62b;</span>
+                    特色玩味控
+                </h3>
+
+                <div class="special-con ">
+
+                    <div class="special-con-l">
+                        <div class="con-item img-ob">
+                            <img src="images/dwp/1.jpg" alt="">
+                        </div>
+
+                        <div class="con-item ">
+                            <img class="fr" src="images/dwp/2.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+
+                        <div class="con-item">
+                            <img class="fr" src="images/dwp/3.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+                        <div class="con-item">
+                            <img class="fr" src="images/dwp/4.jpg" alt="">
+                            <h4>淘宝花鸟</h4>
+                            <p>园艺宠物爱好者集中营</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="special-con-r">
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/5.jpg" alt="">
+
+                        </div>
+
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/6.jpg" alt="">
+
+                        </div>
+                        <div class="con-item">
+                            <h4>淘宝文创<span>潮流文创聚集地</span> </h4>
+                            <img src="images/dwp/7.jpg" alt="">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 第五部分内容结束 -->
+
+        <!-- 第六部分内容开始 -->
+        <div id='afford' class="sixth-part bf othersc-w wrap sect">
+            <div class="afford ">
+                <h3 class="afford-hd">
+                    <span class="iconfont ">&#xe62b;</span>
+                    实惠专业户
+                </h3>
+
+                <div class="afford-con">
+
+                    <!-- <div class="con-item ">
+                        <h4> 
+                            <a href="#">天天特卖</a>  
+                        </h4>
+                        <img class="fl" src="images/zy.jpg" alt="">
+                        <p class="title-p">优惠好货</p>
+                        <p class="c9 ">特卖专区</p>
+                        <a class="bor-a" href="#">全场包邮</a>
+                    </div> -->
+                    
+                </div>
+            </div>
+        </div>
+        <!-- 第六部分内容结束 -->
+
+        <!-- 第七部分内容开始 -->
+        <div id='selling' class="seventh-part bf othersc-w wrap sect">
+            <div class="selling sale-like">
+                <h3 class="selling-hd bf">
+                    <span class="iconfont ">&#xe62b;</span>
+                   热卖单品
+                </h3>
+                
+                <div class="sale-like-con selling-con ">
+
+                    <!-- <div class="con-item">
+                        <img src="images/six.jpg" >
+                        <h4>诺贝妮娜 红色小皮衣女短款修身春秋新款海</h4>
+                        <span class="elt-sales c9">评价 112    收藏 13530</span>
+                        <p><strong class="c4">￥</strong><em class="c4 ">1379</em><i>¥2159</i><span class="m-sales c9">月销1245笔</span> </p>
+                    </div> -->
+
+
+                </div>
+                <div class="selling-ft ">
+                   <div>
+                       <img src="images/s-ft.jpg" alt="">
+                    </div>
+                   <div>
+                       <img src="images/s-ft.jpg" alt="">
+                    </div>
+                   <div>
+                       <img src="images/s-ft.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第七部分内容结束  -->
+
+        <!-- 第八部分内容开始 -->
+        <div id='like' class="eighth-part bf othersc-w wrap sect">
+            <div class="like sale-like">
+                <h3 class="like-hd ">
+                    <span class="iconfont ">&#xe62b;</span>
+                    猜你喜欢
+                </h3>
+                <div class="sale-like-con like-con">
+
+                    <!-- <div class="con-item">
+                        <img src="images/fs-r.jpg" >
+                        <h4>诺贝妮娜 红色小皮衣女短款修身春秋新款海</h4>
+                        <p><strong class="c4">￥</strong><em class="c4 ">1379</em><span class="m-sales c9">销量12343</span> </p>
+                    </div> -->
+                   
+                </div>
+            </div>
+        </div>
+        <!-- 第八部分内容结束 -->
+
+        <!-- 内容结束部分 -->
+        <div class="word-end wrap">
+            <i>END</i>
+        </div>
+        <div class="content-end wrap">
+           <div class="end-item">
+               <h4><span class="iconfont">&#xf0030;</span><em>消费者保障</em></h4>
+               <p>   
+                   <a class="c9"  href="#">保障范围</a>
+                   <a  class="c9" href="#">退货退款流程</a>
+                   <br>
+                   <a  class="c9" href="#">服务中心</a>
+                   <a  class="c9" href="#">更多特色服务</a>
+               </p>
+           </div>
+           <div class="end-item">
+               <h4><span class="iconfont">&#xe660;</span><em>新手上路</em></h4>
+               <p>    
+                    <a class="c9" href="#">新手专区</a>
+                    <a class="c9" href="#">消费警示</a>
+                    <br>
+                    <a class="c9" href="#">交易安全</a>
+                    <a class="c9" href="#">24小时在线帮助</a>
+                    <br>
+                    <a class="c9" href="#">免费开店</a>
+                   
+               </p>
+           </div>
+           <div class="end-item">
+               <h4><span class="iconfont">&#xf0032;</span><em>付款方式</em></h4>
+               <p>    
+                    <a class="c9" href="#">快捷支付</a>
+                    <a class="c9" href="#">信用卡</a>
+                    <a class="c9" href="#">余额宝</a>
+                    <br>
+                    <a class="c9" href="#">蚂蚁花呗</a>
+                    <a class="c9" href="#">货到付款</a>
+               </p>
+           </div>
+           <div class="end-item">
+               <h4><span class="iconfont">&#xf0033;</span><em>淘宝特色</em></h4>
+               <p>  
+                    <a class="c9" href="#">手机淘宝</a>
+                    <a class="c9" href="#">旺旺/旺信</a>
+                    <br>
+                    <a class="c9" href="#">大众评审</a>
+               </p>
+           </div>
+        </div>
+
+        <!-- 页尾部分 -->
+        <footer id="footer">
+            <div class="wrap">
+                <div class="footer-hd">
+                    <p>
+
+                        <a href="#">阿里巴巴集团</a>
+                        <i>|</i>
+
+                        <a href="#">淘宝网</a>
+                        <i>|</i>
+
+                        <a href="#">天猫</a>
+                        <i>|</i>
+
+                        <a href="#">聚划算</a>
+                        <i>|</i>
+
+                        <a href="#">全球速卖通</a>
+                        <i>|</i>
+
+                        <a href="#">阿里巴巴国际交易市场</a>
+                        <i>|</i>
+
+                        <a href="#">1688</a>
+                        <i>|</i>
+
+                        <a href="#">阿里妈妈</a>
+                        <i>|</i>
+
+                        <a href="#">飞猪</a>
+                        <i>|</i>
+
+                        <a href="#">阿里云计算</a>
+                        <i>|</i>
+
+                        <a href="#">AliOS</a>
+                        <i>|</i>
+
+                        <a href="#">阿里通信</a>>
+                        <i>|</i>
+
+                        <a href="#">一淘</a>
+                        <i>|</i>
+
+                        <a href="#">万网</a>
+                        <i>|</i>
+
+                        <a href="#">高德</a>
+                        <i>|</i>
+
+                        <a href="#">UC</a>
+                        <i>|</i>
+
+                        <a href="#">友盟</a>
+                        <br />
+
+                        <a href="#">虾米</a>
+                        <i>|</i>
+
+                        <a href="#">大麦网</a>
+                        <i>|</i>
+
+                        <a href="#">钉钉</a>
+                        <i>|</i>
+
+                        <a href="#">支付宝</a>
+                        <i>|</i>
+
+                        <a href="#">优酷</a>
+                        <i>|</i>
+
+                        <a href="#">土豆</a>
+                        <i>|</i>
+
+                        <a href="#">阿里健康</a>
+                        <i>|</i>
+
+                        <a href="#">阿里影业</a>
+                        <i>|</i>
+
+                        <a href="#">阿里体育</a>
+                        <i>|</i>
+
+                        <a href="#">网商银行</a>
+                    </p>
+                </div>
+                <div class="footer-bd">
+                    <p>
+                        <a href="#">关于淘宝</a>
+                        <a href="#">合作伙伴</a>
+                        <a href="#">营销中心</a>
+                        <a href="#">廉正举报</a>
+                        <a href="#">联系客服</a>
+                        <a href="#">开放平台</a>
+                        <a href="#">诚征英才</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">网站地图</a>
+                        <a href="#">隐私权政策</a>
+                        <a href="#">法律声明</a>
+                        <a href="#">知识产权 </a>
+                        <i>|</i>
+                        <span>© 2003-现在 Taobao.com 版权所有</span>
+                    </p>
+                    <p>
+                        <a href="#"> 增值电信业务经营许可证：浙B2-20080224</a>
+                        <i>|</i>
+                        <a href="#">增值电信业务经营许可证（跨地区）： B2-20150210</a>
+                        <i>|</i>
+                        <a href="#">浙网文（2019）1033-086号</a>
+                        <i>|</i>
+                        <span>浙江省网络食品销售第三方平台提供者备案：浙网食A33010001</span>
+                    </p>
+                    <p>
+                        <span>互联网药品信息服务资格证书（浙）-经营性-2018-0010</span>
+                        <i>|</i>
+                        <span>短消息类服务接入代码使用证书：号【2016】00154-A01</span>
+                        <i>|</i>
+                        <span>信息网络传播视听许可证：1109364号</span>
+                        <i>|</i>
+                        <span>出版物网络交易平台服务经营备案号：新出发浙备字第002号</span>
+                    </p>
+                    <p>
+                        <a href="#"><span></span> 浙公网安备 33010002000078号</a>
+                        <span>广播电视节目制作经营许可证（浙）字第01012号</span>
+                        <span>市场名称登记证：工商网市字3301004120号</span>
+                        <span>医疗器械网络交易服务第三方平台备案：（浙）网械平台备字[2018]第00004号</span>
+                    </p>
+                </div>
+                <div class="footer-ft">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 右侧固定导航 -->
+        <div id="side-tool">
+            <span class="iconfont doll">&#xe605;</span>
+            <a href="#goods-shopping" class="active">爱逛<br>好货</a>
+
+            <a href="#store-live">好店<br>直播</a>
+
+            <a href="#quality-special">品质<br>特色</a>
+
+            <a href="#afford">实惠<br>热卖</a>
+
+            <a href="#like">猜你<br>喜欢</a>
+
+            <a id="back" href="javascript:;"><span class="iconfont">&#xe613;</span><br>顶部</a>
+
+            <a href="javascript:;">反馈</a>
+
+            <a href="javascript:;">暴恐<br>举报</a>
+            </ul>
+        </div>
+    </body>
+
+</html>
